@@ -17,13 +17,14 @@ describe('fetchBreedDescription', () => {
       done();
     });
   });
-  it('returns null as the description for a non-existent breed', () => {
+  it('returns null as the description for a non-existent breed', (done) => {
 
     fetchBreedDescription('DogmanTheDog', (err, desc) => {
     
       assert.strictEqual(desc, null);
 
-    });
+      done();
 
+    });
   });
 });
